@@ -40,7 +40,7 @@ public class FileManager {
 
             // Определяем режим записи
             if (append) {
-                //если файла не существует, создаем его. Если try и файл существвет то записываем в конец файла
+                //если файла не существует, создаем его. Если true и файл существвет то записываем в конец файла
                 Files.writeString(path, content, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
             } else {
                 //если файла не существует, создаем его. Если false и файл сущетвует то перезаписываем его
