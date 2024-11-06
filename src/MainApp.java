@@ -45,14 +45,14 @@ public class MainApp {
                     pathRead = UserChoiceScanner.getUserPathRead(scanner, "Введите путь к файлу для расшифровки: ");
                     pathWrite = UserChoiceScanner.getUserPathWrite(scanner, "Введите путь для записи вариаций текста: ");
                     //Грубая расшифровка. Записываем все варианты
-                    System.out.print("Вы хотите записать текст в один файл (да/нет): ");
+                    System.out.print("Вы хотите записать варианты текста в один файл (да/нет): ");
                     String response = scanner.nextLine();
                     if (response.equalsIgnoreCase("да")) {
                         aBoolean = false;
                     }
                     BruteForce.decryptByBruteForce(FileManager.readFile(pathRead, StandardCharsets.UTF_8),
                             Alphabet.CYRILLIC.getAlphabet(), pathWrite, aBoolean);
-                    System.out.println("Метод успешно реализован");
+                    System.out.println("Метод успешно реализован \n");
                     break;
                 case 4:
                     scanner.nextLine();
