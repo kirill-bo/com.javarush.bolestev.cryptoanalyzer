@@ -58,7 +58,7 @@ public class MainApp {
                     scanner.nextLine();
                     pathRead = UserChoiceScanner.getUserPathRead(scanner, "Введите путь к файлу для подбора ключа: ");
                     //Определяем наиболее вероятный ключ
-                    System.out.println("Введите набор букв через запятую (пример: \"о, е, а, и, н, т, с, р, в\"): ");
+                    System.out.println("Введите набор букв.\nДля более точного определения ключа, введите буквы через пробел\n(пример: \"о е а и н т с р в\"): ");
                     String s = scanner.nextLine();
                     StatisticalAnalyzer statisticalAnalyzer = new StatisticalAnalyzer();
                     int autoKey = statisticalAnalyzer.findMostLikelyShift(FileManager.readFile(pathRead, StandardCharsets.UTF_8),
